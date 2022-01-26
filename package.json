@@ -1,5 +1,6 @@
 {
   "name": "j1h00.github.io",
+  "hompage": "https://j1h00.github.io/portfolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
