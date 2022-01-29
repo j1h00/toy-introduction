@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import cn from "classnames";
 import "../styles/globals.css";
 import styles from "../styles/Home.module.css";
 
@@ -10,9 +10,9 @@ function MyApp({ Component, pageProps }) {
         <title>jihoo</title>
       </Head>
       <Component {...pageProps} />
-      <footer className={styles.footer}>
+      <footer className={cn(styles.footer)}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/j1h00/portfolio"
           target="_blank"
           rel="noopener noreferrer"
         >
