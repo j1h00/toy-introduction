@@ -1,0 +1,17 @@
+.dScreen {
+  height: 700vh;
+}
+
+.pScreen {
+  height: 150vh;
+}
+
+.d1 {
+  top: 2rem;
+  left: 2rem;
+}
+
+.d2 {
+  top: 5rem;
+  left: 16rem;
+}

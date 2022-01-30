@@ -1,17 +1,18 @@
 .smallLogo {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  font-size: 2rem;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 1rem;
+  transform: translateX(-50%);
+  opacity: 0%;
+  animation: show 0.5s ease forwards 2s;
 }
 
 .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fill 0.5s ease forwards 3s;
+  transform: translate(-50%, -50%) scale(1.5);
+  animation: fill 0.5s ease forwards 2s;
 }
 
 .logo path:nth-child(1) {
@@ -35,11 +36,11 @@
   }
 }
 
-@keyframes blank {
+@keyframes show {
   from {
-    fill: transparent;
+    opacity: 0%;
   }
   to {
-    fill: white;
+    opacity: 100%;
   }
 }

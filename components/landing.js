@@ -1,55 +1,68 @@
 import React, { useEffect, useRef } from "react";
-import cn from "classnames";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+import cn from "classnames";
 import styles from "../styles/Landing.module.css";
 
 export default function Landing() {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef();
 
-  useEffect(async () => {
-    const landinPageDOM = ref.current;
-    const slidingText = landinPageDOM.querySelector(".sliding-text");
-    const logo = landinPageDOM.querySelector(".logo");
+  useEffect(() => {
+    const landingPageDOM = ref.current;
+    const slidingText = landingPageDOM.querySelector(".sliding-text");
+    const logo = landingPageDOM.querySelector(".logo");
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: landinPageDOM,
+        trigger: landingPageDOM,
         start: "0%",
-        end: "100%",
+        end: "80%",
         scrub: 1,
       },
     });
+
     let tl2 = gsap.timeline({
       scrollTrigger: {
-        trigger: landinPageDOM,
+        trigger: landingPageDOM,
         start: "0%",
-        end: "100%",
+        end: "80%",
         scrub: 1,
       },
     });
+
     let tl3 = gsap.timeline({
       scrollTrigger: {
-        trigger: landinPageDOM,
+        trigger: landingPageDOM,
         start: "0%",
         end: "100%",
         scrub: 1,
-        pin: true,
       },
     });
 
     tl.fromTo(slidingText, { y: 0 }, { y: -400 });
-    tl2.fromTo(logo, { scale: 1 }, { scale: 0.3 });
-    // tl3.to(logo, { opacity: 0 });
+    tl2.fromTo(
+      logo,
+      { scale: 1.5 },
+      { scale: 0.5, top: "5rem", left: "10rem" }
+    );
+
+    let tl4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: landingPageDOM,
+        start: "0%",
+        end: "750%",
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
+      },
+    });
   }, []);
 
   useEffect(() => {}, []);
 
   return (
-    <div className="h-full" ref={ref}>
-      <h1 className={cn(styles.smallLogo, "sliding-text", "text-white")}>
-        jih00
-      </h1>
+    <div className={cn(styles.home, "h-screen")} ref={ref}>
       <svg
         className={cn(styles.logo, "logo")}
         width="356"
@@ -64,6 +77,14 @@ export default function Landing() {
           strokeWidth="5"
         />
       </svg>
+      <h1 className={cn(styles.smallLogo, "sliding-text", "text-white")}>
+        <div className="flex flex-col items-center">
+          scroll down
+          <span className="material-icons -mt-1 animate-bounce">
+            expand_more
+          </span>
+        </div>
+      </h1>
     </div>
   );
 }
