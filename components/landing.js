@@ -51,7 +51,7 @@ export default function Landing() {
       scrollTrigger: {
         trigger: landingPageDOM,
         start: "0%",
-        end: "750%",
+        end: "900%",
         scrub: 1,
         pin: true,
         pinSpacing: false,

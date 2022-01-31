@@ -1,13 +1,29 @@
 .dScreen {
-  height: 2000vh;
+  height: 800vh;
 }
 
 .pScreen {
   height: 150vh;
 }
 
-.pScreen1 {
-  height: 2300px;
+.pScreen1a {
+  height: 1400px;
+}
+
+.pScreen1b {
+  height: 600px;
+}
+
+.pScreen2a {
+  height: 550px;
+}
+
+.pScreen2b {
+  height: 500px;
+}
+
+.pScreen2c {
+  height: 300px;
 }
 
 .d1 {
@@ -21,5 +37,11 @@
 }
 
 .d3 {
+  top: 3rem;
   left: 24rem;
+}
+
+.posterBox {
+  width: 30rem;
+  height: 30rem;
 }
