@@ -1,7 +1,7 @@
 import Landing from "../components/landing";
 import Description from "../components/Description";
 import Cursor from "../components/cursor";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 
 export default function Home() {
   // const indexDOM = useRef();
