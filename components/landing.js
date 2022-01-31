@@ -57,9 +57,7 @@ export default function Landing() {
         pinSpacing: false,
       },
     });
-  }, []);
-
-  useEffect(() => {}, []);
+  }, [ref]);
 
   return (
     <div className={cn(styles.home, "h-screen")} ref={ref}>

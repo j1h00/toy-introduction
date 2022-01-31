@@ -1,9 +1,13 @@
 .dScreen {
-  height: 700vh;
+  height: 2000vh;
 }
 
 .pScreen {
   height: 150vh;
+}
+
+.pScreen1 {
+  height: 2300px;
 }
 
 .d1 {
@@ -14,4 +18,8 @@
 .d2 {
   top: 5rem;
   left: 16rem;
+}
+
+.d3 {
+  left: 24rem;
 }
