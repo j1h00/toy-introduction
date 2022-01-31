@@ -4,4 +4,8 @@ const name = "portfolio";
 module.exports = {
   reactStrictMode: true,
   assetPrefix: !debug ? `/${name}/` : "",
+  images: {
+    loader: "akamai",
+    path: "",
+  },
 };

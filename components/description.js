@@ -8,14 +8,13 @@ import photo1 from "../public/photo1.jpg";
 import photo2 from "../public/photo2.jpg";
 import photo3 from "../public/photo3.jpg";
 import photo4 from "../public/photo4.jpg";
-import photo5 from "../public/photo5.jpg";
 import cLogo from "../public/C.png";
 import pythonLogo from "../public/python.png";
-import javascriptLogo from "../public/javascript.png";
-import reactLogo from "../public/react.png";
-import nextLogo from "../public/next.png";
-import django from "../public/django.png";
-import pandas from "../public/pandas.png";
+// import javascriptLogo from "../public/javascript.png";
+// import reactLogo from "../public/react.png";
+// import nextLogo from "../public/next.png";
+// import django from "../public/django.png";
+// import pandas from "../public/pandas.png";
 
 export default function Description() {
   gsap.registerPlugin(ScrollTrigger);
