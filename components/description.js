@@ -109,7 +109,7 @@ export default function Description() {
       <div className={cn("p1a", styles.pScreen1a, "relative")}>
         <div className="sticky top-0 title">
           <div className={cn(styles.d1, "absolute", "text-2xl")}>
-            <p>I'm</p>
+            <p>{"I'm"}</p>
           </div>
           <div className={cn(styles.d2, "absolute", "text-2xl")}>
             <p>from Seoul, Korea.</p>
@@ -263,7 +263,9 @@ export default function Description() {
       <div className={cn("p3", styles.pScreen, "relative")}>
         <div className="sticky top-0">
           <div className={cn(styles.d1, "absolute", "text-2xl")}></div>
-          <div className={cn(styles.d2, "absolute", "text-2xl")}>'s skills</div>
+          <div className={cn(styles.d2, "absolute", "text-2xl")}>
+            {"'s skills"}
+          </div>
         </div>
         <div className="grid grid-cols-12">
           <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-20">

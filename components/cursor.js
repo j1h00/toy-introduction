@@ -6,7 +6,7 @@ import styles from "../styles/Cursor.module.css";
 function Cursor() {
   const cursorDOM = useRef();
 
-  useEffect(async () => {
+  useEffect(() => {
     const cursorTag = cursorDOM.current;
     const balls = cursorTag.querySelector("div");
 

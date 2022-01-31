@@ -5,7 +5,7 @@ import styles from "../styles/Shape.module.css";
 function Shape() {
   const shapesDOM = useRef();
 
-  useEffect(async () => {
+  useEffect(() => {
     const shapeTag = shapesDOM.current;
 
     if (typeof window !== "undefined") {
