@@ -3,7 +3,7 @@ const name = "portfolio";
 // /${name}/
 module.exports = {
   reactStrictMode: true,
-  assetPrefix: !debug ? "https://j1h00.github.io/portfolio/" : "",
+  assetPrefix: !debug ? `/${name}/` : "",
   images: {
     loader: "akamai",
     path: "",

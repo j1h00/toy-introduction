@@ -22,6 +22,7 @@ export default function Description() {
   const ref = useRef();
 
   useEffect(() => {
+    console.log(photo1);
     const descriptionPageDOM = ref.current;
     const p1a = descriptionPageDOM.querySelector(".p1a");
     const p1b = descriptionPageDOM.querySelector(".p1b");
@@ -343,11 +344,11 @@ export default function Description() {
               <p className="text-lg">guruboy@snu.ac.kr</p>
             </div>
             <div className="w-96 h-32 bg-cyan-800">
-              <p className="text-lg">"TODAY I LEARNED" public</p>
+              <p className="text-lg">{"TODAY I LEARNED"} public</p>
               <p>algoritms, Front-end notes, Toy projects</p>
             </div>
             <div className="w-96 h-32 bg-sky-800">
-              <p className="text-lg">"TODAY I LEARNED" Private</p>
+              <p className="text-lg">{"TODAY I LEARNED"} Private</p>
               <p>python, java, vue, django notes</p>
               <p>*email me to gain authorization</p>
             </div>
