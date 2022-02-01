@@ -9,12 +9,13 @@ import photo2 from "../public/photo2.jpg";
 import photo3 from "../public/photo3.jpg";
 import photo4 from "../public/photo4.jpg";
 import cLogo from "../public/C.png";
-import pythonLogo from "../public/python.png";
-// import javascriptLogo from "../public/javascript.png";
-// import reactLogo from "../public/react.png";
-// import nextLogo from "../public/next.png";
-// import django from "../public/django.png";
-// import pandas from "../public/pandas.png";
+import pythonLogo from "../public/python3.png";
+import javascript from "../public/javascript.png";
+import vue from "../public/vue.png";
+import react from "../public/react.png";
+import next from "../public/next.svg";
+import django from "../public/django2.png";
+import pandas from "../public/pandas.svg";
 
 export default function Description() {
   gsap.registerPlugin(ScrollTrigger);
@@ -93,13 +94,13 @@ export default function Description() {
       },
     });
 
-    tl1a.fromTo(p1a, { opacity: "100%" }, { opacity: "0%" });
-    tl1b.fromTo(p1b, { opacity: "100%" }, { opacity: "0%" });
-    tl2a.fromTo(p2a, { opacity: "100%" }, { opacity: "0%" });
-    tl2b.fromTo(p2b, { opacity: "100%" }, { opacity: "0%" });
-    tl2c.fromTo(p2c, { opacity: "100%" }, { opacity: "0%" });
-    tl3.fromTo(p3, { opacity: "100%" }, { opacity: "0%" });
-    tl4.fromTo(p4, { opacity: "100%" }, { opacity: "0%" });
+    tl1a.fromTo(p1a, { opacity: 1 }, { opacity: 0 });
+    tl1b.fromTo(p1b, { opacity: 1 }, { opacity: 0 });
+    tl2a.fromTo(p2a, { opacity: 1 }, { opacity: 0 });
+    tl2b.fromTo(p2b, { opacity: 1 }, { opacity: 0 });
+    tl2c.fromTo(p2c, { opacity: 1 }, { opacity: 0 });
+    tl3.fromTo(p3, { opacity: 1 }, { opacity: 0 });
+    tl4.fromTo(p4, { opacity: 1 }, { opacity: 0 });
   }, [ref]);
 
   return (
@@ -115,7 +116,7 @@ export default function Description() {
           </div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-5 mt-32 text-xs">
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-5 mt-40 text-xs">
             <div className="relative w-96 h-96">
               <div className="absolute z-0 w-96 h-96">
                 <Image
@@ -178,9 +179,9 @@ export default function Description() {
           </div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-5 mt-32 text-xs">
-            <div className="relative w-96 h-96">
-              <div className="absolute w-full iframe">
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-5 mt-40 text-xs">
+            <div className="relative w-96 h-96 flex justify-center">
+              <div className={styles.iframe}>
                 <iframe
                   style={{ borderRadius: "12px" }}
                   src="https://open.spotify.com/embed/playlist/1yRcHG3d0iYhPxPHTgKu9d?utm_source=generator"
@@ -204,7 +205,7 @@ export default function Description() {
           </div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-32">
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-3 mt-56">
             <div className="relative w-96 h-96">
               <div className="absolute z-0 w-96 h-96">
                 <Image
@@ -230,21 +231,24 @@ export default function Description() {
           </div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-32">
-            <div className="w-96 h-32 flex">
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-5 mt-56">
+            <div className="w-96 h-32 flex justify-center">
               <div className="w-32 h-32">
                 <Image src={cLogo} alt="c-logo" />
               </div>
-              <div className="w-32 h-32">
+              <div className="w-32 h-32 flex items-center">
                 <Image src={pythonLogo} alt="python-logo" />
               </div>
             </div>
-            <div className="w-96 h-48">
+            <div className="w-96 h-48 text-indigo-400 text-center">
               <p>Introduction to Computer Science for Biologists</p>
               <p>Concept of Computer and Practice</p>
               <p>Programmgin Practice</p>
               <p>Introduction to Bioinformatics</p>
               <p>Data Structure </p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
             </div>
           </div>
         </div>
@@ -259,7 +263,7 @@ export default function Description() {
       </div>
 
       {/* page 3 */}
-      <div className={cn("p3", styles.pScreen, "relative")}>
+      <div className={cn("p3", styles.pScreen3, "relative")}>
         <div className="sticky top-0">
           <div className={cn(styles.d1, "absolute", "text-2xl")}></div>
           <div className={cn(styles.d2, "absolute", "text-2xl")}>
@@ -267,37 +271,92 @@ export default function Description() {
           </div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-20">
-            <div className="w-96 h-32 bg-white"></div>
-            <div className="w-96 h-96 bg-indigo-900">2</div>
-            <div className="w-96 h-96 bg-red-900">3</div>
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-3 mt-40">
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-32 h-32 flex items-center">
+                <Image src={javascript} alt="js-logo" />
+              </div>
+            </div>
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-32 h-32 flex items-center">
+                <Image src={vue} alt="vue-logo" />
+              </div>
+            </div>
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-32 h-32 flex items-center">
+                <Image src={react} alt="react-logo" />
+              </div>
+            </div>
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-48 h-32 flex items-center">
+                <Image src={next} alt="next-logo" />
+              </div>
+            </div>
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-48 h-32 flex items-center">
+                <Image src={django} alt="django-logo" />
+              </div>
+            </div>
+            <div className="w-96 h-32 flex justify-center">
+              <div className="w-48 h-32 flex items-center">
+                <Image src={pandas} alt="pandas-logo" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
       {/* page 4 */}
-      <div className={cn("p4", styles.pScreen, "relative")}>
+      <div className={cn("p4", styles.pScreen4, "relative")}>
         <div className="sticky top-0">
           <div className={cn(styles.d1, "absolute", "text-2xl")}></div>
           <div className={cn(styles.d2, "absolute", "text-2xl")}>projects</div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-20">
-            <div className="w-96 h-96 bg-white">1</div>
-            <div className="w-96 h-96 bg-indigo-900">2</div>
-            <div className="w-96 h-96 bg-red-900">3</div>
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-3 mt-40">
+            <div className="w-96 h-96 bg-indigo-900 text-white">
+              <p>Movie platform web-app</p>
+              <p>featuring</p>
+              <p>1. user account/login</p>
+              <p>2. movie details</p>
+              <p>3. reviews / comment</p>
+              <p>4. movie recommendation based on rating</p>
+              <p className="text-yellow-200">2021-11-18 ~ 2021-11-26</p>
+            </div>
+            <div className="w-96 h-96 bg-rose-800 text-white">
+              <p>Survey platform web-app with kiosk</p>
+              <p>for patient caregivers</p>
+              <p>who need medical self-check</p>
+              <p className="text-lime-100">2022-01-10 ~ 2022-02-18</p>
+            </div>
           </div>
         </div>
       </div>
       {/* page last */}
-      <div className={cn("p5", "h-screen", "relative")}>
+      <div className={cn("p5", styles.pScreen5, "relative")}>
         <div className="sticky top-0">
           <div className={cn(styles.d1, "absolute", "text-2xl")}></div>
           <div className={cn(styles.d2, "absolute", "text-2xl")}>contacts</div>
         </div>
         <div className="grid grid-cols-12">
-          <div className="col-start-4 md:col-start-8 flex flex-col gap-3 mt-20">
-            <div className="w-96 h-96 bg-white">1</div>
-            <div className="w-96 h-96 bg-indigo-900">2</div>
+          <div className="sm:col-start-4 md:col-start-8 flex flex-col gap-3 mt-20">
+            <div className="w-96 h-32 bg-yellow-300 text-black">
+              <p className="text-lg">guruboy@snu.ac.kr</p>
+            </div>
+            <div className="w-96 h-32 bg-cyan-800">
+              <p className="text-lg">"TODAY I LEARNED" public</p>
+              <p>algoritms, Front-end notes, Toy projects</p>
+            </div>
+            <div className="w-96 h-32 bg-sky-800">
+              <p className="text-lg">"TODAY I LEARNED" Private</p>
+              <p>python, java, vue, django notes</p>
+              <p>*email me to gain authorization</p>
+            </div>
+            <div className="w-96 h-32 bg-purple-800">
+              <p>this portfolio</p>
+              <p>made with next.js, gsap animation library</p>
+              <p>this portfolio</p>
+            </div>
+            <div className="w-96 h-32 bg-violet-800"></div>
           </div>
           <div className="col-start-8 col-span-4">written by jihoo</div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+// import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import cn from "classnames";
 import styles from "../styles/Landing.module.css";
 
@@ -13,6 +13,17 @@ export default function Landing() {
     const landingPageDOM = ref.current;
     const slidingText = landingPageDOM.querySelector(".sliding-text");
     const logo = landingPageDOM.querySelector(".logo");
+    const gotoTopButton = landingPageDOM.querySelector(".scrollTop");
+
+    if (typeof window !== undefined) {
+      gotoTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: landingPageDOM,
@@ -34,18 +45,17 @@ export default function Landing() {
     let tl3 = gsap.timeline({
       scrollTrigger: {
         trigger: landingPageDOM,
-        start: "0%",
-        end: "100%",
+        start: "700%",
+        end: "800%",
         scrub: 1,
       },
     });
 
     tl.fromTo(slidingText, { y: 0 }, { y: -400 });
-    tl2.fromTo(
-      logo,
-      { scale: 1.5 },
-      { scale: 0.5, top: "5rem", left: "10rem" }
-    );
+    tl2.fromTo(logo, { scale: 1 }, { scale: 0.5, top: "5rem", left: "10rem" });
+
+    tl3.to(logo, { scale: 1, top: "50%", left: "50%" });
+    tl3.fromTo(gotoTopButton, { y: 1000 }, { y: 800 });
 
     let tl4 = gsap.timeline({
       scrollTrigger: {
@@ -62,7 +72,7 @@ export default function Landing() {
   return (
     <div className={cn(styles.home, "h-screen")} ref={ref}>
       <svg
-        className={cn(styles.logo, "logo")}
+        className={cn(styles.logo, "logo", "md:scale-150")}
         width="356"
         height="158"
         viewBox="0 0 356 158"
@@ -81,6 +91,14 @@ export default function Landing() {
           <span className="material-icons -mt-1 animate-bounce">
             expand_more
           </span>
+        </div>
+      </h1>
+      <h1 className={cn(styles.scrollTop, "scrollTop", "text-white")}>
+        <div className="flex flex-col items-center">
+          <span className="material-icons -mt-1 animate-bounce">
+            expand_less
+          </span>
+          move to top
         </div>
       </h1>
     </div>
