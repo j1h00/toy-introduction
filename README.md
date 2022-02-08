@@ -1,5 +1,7 @@
 # j1h00 portfolio v0.1
 
+> j1h00.github.io/portfolio
+
 ## Skills
 - Next.js project built with create-next-app 
 - scroll trigger animation using gsap library 
