@@ -1,7 +1,7 @@
 # j1h00 portfolio v0.1
 
 > checkout portfolio here
-> [https://j1h00.github.io/portfolio/](https://j1h00.github.io/first_portfolio/)
+> [https://j1h00.github.io/portfolio/](https://j1h00.github.io/portfolio/)
 
 ## Skills
 - Next.js project built with create-next-app 
