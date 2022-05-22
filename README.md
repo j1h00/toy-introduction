@@ -13,13 +13,13 @@
 
 > [refer to this blog](https://velog.io/@ricale/next.js-%EB%A1%9C-GitHub-Pages-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0)
 
-use github pages 
+use command below, which uses github-pages to deploy 
 
 ```bash
-npm deploy
+npm run deploy
 ```
 
-this contains
+this contains commands below
 
 ```bash
 rm -rf node_modules/.cache 
