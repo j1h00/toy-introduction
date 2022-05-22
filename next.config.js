@@ -1,5 +1,5 @@
 const debug = process.env.NODE_ENV !== "production";
-const name = "portfolio";
+const name = "toy-introduction";
 // /${name}/
 module.exports = {
   reactStrictMode: true,
